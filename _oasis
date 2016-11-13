@@ -9,21 +9,23 @@ Copyrights:            (C) 2016 Jane Street Group LLC <opensource@janestreet.com
 Maintainers:           Jane Street Group, LLC <opensource@janestreet.com>
 License:               Apache-2.0
 LicenseFile:           LICENSE.txt
-Homepage:              https://github.com/janestreet/async_http_js
+Homepage:              https://github.com/imeckler/async_http_js
 Plugins:               StdFiles (0.3), DevFiles (0.3)
 XStdFilesAUTHORS:      false
 XStdFilesREADME:       false
 BuildTools:            ocamlbuild
 BetaFeatures:          section_object
 AlphaFeatures:         ocamlbuild_more_args
-XOCamlbuildPluginTags: package(js-build-tools.ocamlbuild_goodies), package(ppx_driver.ocamlbuild)
+XOCamlbuildPluginTags: package(js_of_ocaml), package(js_of_ocaml.syntax), package(js_of_ocaml.ocamlbuild)
 FilesAB:               META.ab
 
 Library async_http_js
   Path:         src
   Pack:         true
+  BuildTools:ocamlbuild
   Modules:      Http,
                 Std
   BuildDepends: async_kernel,
                 js_of_ocaml,
                 sexplib
+                js_of_ocaml.ppx

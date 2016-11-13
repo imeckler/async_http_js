@@ -1,6 +1,5 @@
 open Core_kernel.Std
 open Async_kernel.Std
-open Js_of_ocaml
 
 module Opt = Js.Opt
 module Optdef = Js.Optdef
